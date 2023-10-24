@@ -1,0 +1,10 @@
+{
+  "patches": {
+    "url": "https://github.com/ReVanced/revanced-patches/releases/download/v2.196.0-dev.5/revanced-patches-2.196.0-dev.5.jar",
+    "version": "v2.196.0-dev.5"
+  },
+  "integrations": {
+    "url": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.121.0-dev.1/revanced-integrations-0.121.0-dev.1.apk",
+    "version": "v0.121.0-dev.1"
+  }
+}
