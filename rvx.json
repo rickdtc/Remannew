@@ -1,10 +1,10 @@
 {
   "patches": {
-    "url": "https://github.com/inotia00/revanced-patches/releases/download/v2.195.4/revanced-patches-2.195.4.jar",
-    "version": "v2.195.4"
+    "url": "https://github.com/inotia00/revanced-patches/releases/download/v2.195.12/revanced-patches-2.195.12.jar",
+    "version": "v2.195.12"
   },
   "integrations": {
-    "url": "https://github.com/inotia00/revanced-integrations/releases/download/v0.120.4/revanced-integrations-0.120.4.apk",
-    "version": "v0.120.4"
+    "url": "https://github.com/inotia00/revanced-integrations/releases/download/v0.120.12/revanced-integrations-0.120.12.apk",
+    "version": "v0.120.12"
   }
 }
