@@ -1,4 +1,4 @@
-name: fxfileexp
+name: fxtest
 
 on:
   workflow_dispatch:
