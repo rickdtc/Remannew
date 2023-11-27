@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
         repository: inotia00/revanced-patches
-    - name: clone 
+    - name: t3sr
       run: echo ${{ github.event.release.tag_name }}
     
