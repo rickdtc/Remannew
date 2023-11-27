@@ -19,5 +19,5 @@ jobs:
         distribution: 'zulu'
         cache: gradle
     - name: check
-      run: cd revanced-patches && ./gradlew tasks
+      run: cd revanced-patches && ./gradlew tasks --all
     
