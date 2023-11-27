@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: clone 
-      run: git clone https://github.com/ungeskriptet/revanced-patches && git pull upstream && git merge fxfileexplorer
+      run: git clone https://github.com/ungeskriptet/revanced-patches && cd revanced-patches && git pull upstream && git merge fxfileexplorer
     - name: set up zulu JDK 17 
       uses: actions/setup-java@v3
       with:
