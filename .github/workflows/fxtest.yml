@@ -19,7 +19,7 @@ jobs:
         distribution: 'zulu'
         cache: gradle
     - name: build
-      run: cd revanced-patches && ./gradlew classes
+      run: cd revanced-patches && ./gradlew generateBundle
     - name: upload 
       uses: actions/upload-artifact@v3 
       with:
