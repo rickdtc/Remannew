@@ -25,6 +25,24 @@ jobs:
       uses: WyriHaximus/github-action-get-previous-tag@v1.3.0
     - uses: actions/checkout@v4
     - name: write 
-      run: echo {"patches":{"url":"https://github.com/inotia00/revanced-patches/releases/download/${{ steps.ser.outputs.tag }}/revanced-patches-${{ steps.ser.outputs.tag: 1 }}.jar","version":"${{ steps.ser.outputs.tag }}"},"integrations":{"url":"https://github.com/inotia00/revanced-integrations/releases/download/v0.121.7/revanced-integrations-0.121.7.apk","version":"v0.121.7"}}
-
+      uses: DamianReeves/write-file-action@master
+      with:
+        path: rvxf.json
+        write-mode: overwrite
+        contents: |
+           {
+             "patches": {
+               "url": "https://github.com/inotia00/revanced-patches/releases/download/${{ steps.ser.outputs.tag }}/revanced-patches-${{ steps.ser.outputs.tag: 1 }}.jar",
+               "version": "${{ steps.ser.outputs.tag }}"
+            },
+             "integrations": {
+                 "url": "https://github.com/inotia00/revanced-integrations/releases/download/${{ steps.ger.outputs.tag }}/revanced-integrations-0.121.7.apk",
+                "version": "v0.121.7"
+            }
+           }         
+    - name: upload test
+      uses: actions/upload-artifact@v3
+      with:
+        name: f
+        path: rvxf.json
       
