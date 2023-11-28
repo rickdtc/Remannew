@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-
+  id: bui
     runs-on: ubuntu-latest
 
     steps:
@@ -17,4 +17,4 @@ jobs:
       id: ser
       uses: WyriHaximus/github-action-get-previous-tag@v1.3.0
     - name: S
-      run: echo ${{ build.steps.ser.outputs.tag }}
+      run: echo ${{ bui.steps.ser.outputs.tag }}
