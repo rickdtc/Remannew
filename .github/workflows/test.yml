@@ -26,13 +26,15 @@ jobs:
     - uses: actions/checkout@v4
     - name: write 
       uses: DamianReeves/write-file-action@master
+      env:
+        rp: ${{ steps.ser.outputs.tag: 1}}
       with:
         path: rvxf.json
         write-mode: overwrite
         contents: |
            {
              "patches": {
-               "url": "https://github.com/inotia00/revanced-patches/releases/download/${{ steps.ser.outputs.tag }}/revanced-patches-${{ steps.ser.outputs.tag : 1 }}.jar",
+               "url": "https://github.com/inotia00/revanced-patches/releases/download/${{ steps.ser.outputs.tag }}/revanced-patches-$rp.jar",
                "version": "${{ steps.ser.outputs.tag }}"
             },
              "integrations": {
