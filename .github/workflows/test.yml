@@ -12,6 +12,9 @@ jobs:
     - uses: actions/checkout@v4
       with:   
         repository: inotia00/revanced-patches
+        fetch-depth: 0
     - name: t3sr
-      run: echo ${{ github.event.release.tag_name }}
-    
+      id: ser
+      uses: WyriHaximus/github-action-get-previous-tag@v1.3.0
+    - name: S
+      run: echo ${{ steps.previoustag.outputs.tag }}
