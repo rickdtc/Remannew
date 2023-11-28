@@ -34,7 +34,7 @@ jobs:
         contents: |
            {
              "patches": {
-               "url": "https://github.com/inotia00/revanced-patches/releases/download/${{ steps.ser.outputs.tag }}/revanced-patches-${rp: 1}.jar",
+               "url": "https://github.com/inotia00/revanced-patches/releases/download/${{ steps.ser.outputs.tag }}/revanced-patches-$rp.jar",
                "version": "${{ steps.ser.outputs.tag }}"
             },
              "integrations": {
