@@ -17,4 +17,4 @@ jobs:
       id: ser
       uses: WyriHaximus/github-action-get-previous-tag@v1.3.0
     - name: S
-      run: echo ${{ steps.ser.outputs.tag }}
+      run: echo ${{ build.steps.ser.outputs.tag }}
