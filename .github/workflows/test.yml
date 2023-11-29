@@ -34,8 +34,6 @@ jobs:
       run: echo ${{ steps.geck.outputs.rp }}
     - name: write 
       uses: DamianReeves/write-file-action@master
-      env:
-        rp: ${{ steps.ser.outputs.tag }}
       with:
         path: rvxf.json
         write-mode: overwrite
@@ -50,9 +48,7 @@ jobs:
                 "version": "${{ steps.ger.outputs.tag }}"
             }
            }         
-    - name: upload test
-      uses: actions/upload-artifact@v3
-      with:
-        name: f
-        path: rvxf.json
+    - name: push
+      uses: ad-m/github-push-action@v0.8.0
+            
       
