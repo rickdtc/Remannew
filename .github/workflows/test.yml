@@ -47,7 +47,12 @@ jobs:
                  "url": "https://github.com/inotia00/revanced-integrations/releases/download/${{ steps.ger.outputs.tag }}/revanced-integrations-${{ steps.geck.outputs.ri }}.apk",
                 "version": "${{ steps.ger.outputs.tag }}"
             }
-           }         
+           } 
+    - name: commit
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -a -m "update"
     - name: push
       uses: ad-m/github-push-action@v0.8.0
       with:
