@@ -25,7 +25,9 @@ jobs:
       uses: WyriHaximus/github-action-get-previous-tag@v1.3.0
     - uses: actions/checkout@v4
     - id: geck
-      run: INPUT=${{ steps.ser.outputs.tag }} echo "::set-output name=rp::${INPUT:1}"
+      run: |
+        INPUT=${{ steps.ser.outputs.tag }} 
+        echo "::set-output name=rp::${INPUT:1}"
     - name: check
       run: echo ${{ steps.geck.outputs.rp }}
     - name: write 
