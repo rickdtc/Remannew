@@ -13,14 +13,14 @@ jobs:
       with:   
         repository: inotia00/revanced-patches
         fetch-depth: 0
-    - name: t3sr
+    - name: get tag
       id: ser
       uses: WyriHaximus/github-action-get-previous-tag@v1.3.0
     - uses: actions/checkout@v4
       with:   
         repository: inotia00/revanced-integrations
         fetch-depth: 0
-    - name: t3sr
+    - name: get tag
       id: ger
       uses: WyriHaximus/github-action-get-previous-tag@v1.3.0
     - uses: actions/checkout@v4
@@ -30,8 +30,6 @@ jobs:
         echo "::set-output name=rp::${INPUT:1}"
         INPU=${{ steps.ger.outputs.tag }} 
         echo "::set-output name=ri::${INPU:1}"
-    - name: check
-      run: echo ${{ steps.geck.outputs.rp }}
     - name: write 
       uses: DamianReeves/write-file-action@master
       with:
