@@ -2,7 +2,7 @@ name: test
 
 on:
   release:
-    repository: inotia00/revanced-patches 
+    repository: rickdtc/buildingig
     types: published
   workflow_dispatch:
 
