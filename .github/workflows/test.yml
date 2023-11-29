@@ -51,5 +51,5 @@ jobs:
     - name: push
       uses: ad-m/github-push-action@v0.8.0
       with:
-        github_token:  ${{ secrets.GT }}
+        github_token:  ${{ secrets.GITHUB_TOKEN }}
       
