@@ -28,6 +28,8 @@ jobs:
       run: |
         INPUT=${{ steps.ser.outputs.tag }} 
         echo "::set-output name=rp::${INPUT:1}"
+        INPU=${{ steps.ger.outputs.tag }} 
+        echo "::set-output name=ri::${INPU:1}"
     - name: check
       run: echo ${{ steps.geck.outputs.rp }}
     - name: write 
