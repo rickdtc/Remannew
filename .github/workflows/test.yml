@@ -24,11 +24,12 @@ jobs:
       id: ger
       uses: WyriHaximus/github-action-get-previous-tag@v1.3.0
     - uses: actions/checkout@v4
-    - id: g
+    - id: geck
       run: |
         INPUT=${{ steps.ser.outputs.tag }} echo "::set-output name=rp::${INPUT:1}"
-        INPUT2=${{ steps.ger.outputs.tag }} echo "::set-output name=ri::${INPUT2:1}"
-
+        INPU=${{ steps.ger.outputs.tag }} echo "::set-output name=ri::${INPU:1}"
+    - name: check
+      run: echo ${{ steps.geck.outputs.rp }}
     - name: write 
       uses: DamianReeves/write-file-action@master
       env:
@@ -39,11 +40,11 @@ jobs:
         contents: |
            {
              "patches": {
-               "url": "https://github.com/inotia00/revanced-patches/releases/download/${{ steps.ser.outputs.tag }}/revanced-patches-${{ steps.g.outputs.rp }}.jar",
+               "url": "https://github.com/inotia00/revanced-patches/releases/download/${{ steps.ser.outputs.tag }}/revanced-patches-${{ steps.geck.outputs.rp }}.jar",
                "version": "${{ steps.ser.outputs.tag }}"
             },
              "integrations": {
-                 "url": "https://github.com/inotia00/revanced-integrations/releases/download/${{ steps.ger.outputs.tag }}/revanced-integrations-${{ steps.g.outputs.ri }}.apk",
+                 "url": "https://github.com/inotia00/revanced-integrations/releases/download/${{ steps.ger.outputs.tag }}/revanced-integrations-${{ steps.geck.outputs.ri }}.apk",
                 "version": "${{ steps.ger.outputs.tag }}"
             }
            }         
