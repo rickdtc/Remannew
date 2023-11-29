@@ -1,6 +1,9 @@
 name: test
 
 on:
+  release:
+    repository: inotia00/revanced-patches 
+    types: published
   workflow_dispatch:
 
 jobs:
