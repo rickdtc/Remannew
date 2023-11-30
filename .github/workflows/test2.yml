@@ -1,9 +1,7 @@
 name: test 2
 
 on:
-  release:
-    repository: [inotia00/revanced-patches, inotia00/revanced-integrations]
-    types: published
+  
   workflow_dispatch:
 
 jobs:
