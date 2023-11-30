@@ -1,9 +1,11 @@
 name: test 2
 
 on:
-  
+  release:
+    repository: [ReVanced/revanced-patches, ReVanced/revanced-integrations]
+    types: published
   workflow_dispatch:
-
+  
 jobs:
   update:
   
